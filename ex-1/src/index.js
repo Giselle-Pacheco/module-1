@@ -16,13 +16,23 @@ const Content=(props)=>{
     <div>
       <p>
         Content: 
-          <p>Part1 = {props.part1}, number of exercises {props.exercises1}</p>
-          <p>Part2 = {props.part2}, number of exercises {props.exercises2}</p>
-          <p>Part3 = {props.part3}, number of exercises {props.exercises3}</p>
-
+          <Part part={props.part1} exercises={props.exercises1}/>
+          <Part part={props.part2} exercises={props.exercises2}/>
+          <Part part={props.part3} exercises={props.exercises3}/>
       </p>
     </div>
   )
+}
+
+const Part=(props)=>{
+  return(
+    <div> 
+      <p>
+      {props.part}, number of exercises {props.exercises}      
+      </p>
+    </div>
+  )
+
 }
 
 const Total=(props)=>{
