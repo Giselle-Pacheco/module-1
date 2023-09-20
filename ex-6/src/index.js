@@ -25,17 +25,34 @@ const Button = ({ onClick, text }) => (
 
 const Statistics=(props)=>{
   return(
-    <div>      
-      <p>good: {props.good}</p>
-      <p>neutral: {props.neutral}</p>
-      <p>bad: {props.bad}</p>
-      <p>all {props.total}</p>
-      <p>average {(props.total)/3}</p>
-      <p>positive {props.good/props.total}</p> 
+    <div>
+      <StatisticLine text="good" value ={props.good} />
+      <StatisticLine text="neutral" value ={props.neutral} />
+      <StatisticLine text="bad" value={props.bad} />
+      <StatisticLine text="all" value={props.total} />
+      <StatisticLine text="average" value={(props.total)/3} />
+      <StatisticLine text="positive" value={(props.good/props.total)} />
+      
     </div>
   )
 }
 
+const StatisticLine=(props)=>{
+  return(
+    <div>
+      {props.text} ={props.value}
+    </div>
+  )
+}    
+    // <div>      
+    //   <p>good: {props.good}</p>
+    //   <p>neutral: {props.neutral}</p>
+    //   <p>bad: {props.bad}</p>
+    //   <p>all {props.total}</p>
+    //   <p>average {(props.total)/3}</p>
+    //   <p>positive {props.good/props.total}</p> 
+    // </div>
+ 
 
 const App = () => {
   const [good, setGood] = useState(0)
