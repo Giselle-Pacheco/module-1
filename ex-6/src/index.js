@@ -44,15 +44,7 @@ const StatisticLine=(props)=>{
     </div>
   )
 }    
-    // <div>      
-    //   <p>good: {props.good}</p>
-    //   <p>neutral: {props.neutral}</p>
-    //   <p>bad: {props.bad}</p>
-    //   <p>all {props.total}</p>
-    //   <p>average {(props.total)/3}</p>
-    //   <p>positive {props.good/props.total}</p> 
-    // </div>
- 
+    
 
 const App = () => {
   const [good, setGood] = useState(0)
